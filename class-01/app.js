@@ -1,22 +1,29 @@
 var firstname = "Gavan ";
-var lastnamen= "kumar";
-
+var lastname= "kumar";
+var fullname =firstname+lastname;
 
 console.log(firstname);
-console.log(lastnamen);
-var fullname =firstname+lastnamen;
+console.log(lastname);
 console.log(fullname)
+
 alert(fullname)
-alert("contact")
+
+
+
+
+
 
 var email = "gavankumar067@gmail.com";
 var mobilenumber = "4454534";
-var contact = emal + mobilenumber; 
+var contact = email + mobilenumber; 
 
 
 console.log(email)
 console.log(mobilenumber)
-console.log(contact+url)
+ 
+console.log(contact)
+alert(contact)
+
 
 
 
