@@ -7,6 +7,7 @@ console.log(lastnamen);
 var fullname =firstname+lastnamen;
 console.log(fullname)
 alert(fullname)
+alert("contact")
 
 var email = "gavankumar067@gmail.com";
 var mobilenumber = "4454534";
