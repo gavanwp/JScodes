@@ -53,3 +53,15 @@ console.log(d)
   console.log(" The value of  num1 ++ is "  + ( num1 ++ ) ); 
   console.log(" The value of  ++ num2 is "  + ( ++  num2 ) ); 
 
+  var num3 = ("200")
+  var num4 =("400")
+
+  console.log(num3+num4)
+
+
+
+  var FirstName =(" Gavan ")
+var LastName =("kumar ") 
+var bio = ( " Is a Wordpress developer and designer ")
+
+console.log(First+LastName+bio)
