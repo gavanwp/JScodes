@@ -40,3 +40,37 @@ console.log(temp);
 //  console.log('length of fname is ${len');
 console.log("hello Javascript... \n How are you  ")
 
+
+
+
+
+
+
+var main = 200;
+console.log(main)
+
+
+var a = 10 ;
+var b = a++ ;
+
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+
+var a = 10 ;
+var b = a-- ;
+
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+console.log(b)
+
+
