@@ -17,36 +17,41 @@
 
 
 var country= prompt("type country name", "Pakistan");
+var clas1 = prompt("Enter Your class")
 var countryName= "Pakistan"
 var countryCode ;
-var rollNo= 0 ;
+var clas1= 100 ;
+var clas2 = 700;
 var classtime = 3;
 var massage = "hello dear"
 
-if (country=== countryName)
+if (country=== countryName | clas1 === 101 | clas2 === 100 )
 {
     countryCode="+92"
-    rollNo++ ;
+    clas1++ ;
+    clas2 ++ ;
     classtime="3"
     massage="hello dear "
     console.log("country Name" + country)
     console.log("country code " + countryCode)
-    console.log("Roll No ", rollNo)
+    console.log("Roll No ", clas1)
+    console.log("Roll No ", clas2)
+
     console.log( "calss Time " , classtime)
     console.log("Massage" , massage)
 
 }
 
-var user = prompt("Enter your Full Name ", "2302")
-var email = "gavankumar067@gmail.com";
-var passwrod = "fdafjdfjdklf@kd";
 
 
-if(user=== "2302"){
-    console.log("This user name already taken" + user + email)
-    console.log("This is my email" + email)
-    console.log("This is my password" + passwrod)
-}
-let name1 = prompt("Enter your first name ")
 
-document.write(name1)
+
+
+
+
+
+
+
+
+
+
