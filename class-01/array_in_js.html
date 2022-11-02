@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array In JavaScript</title>
+</head>
+
+<body>
+    <div>
+        <h1>hello world</h1>
+    </div>
+
+
+    <script>
+
+
+
+
+
+
+
+        // let ary = ["Course ", "CSS", "HTML", "Python", "JavaScript"]
+        // console.log(ary)
+        // console.log(typeof (ary))
+
+        // console.log(ary.length)
+        // ary[3] = "PHP"        // Changing an Array
+        // console.log(ary[4])   // index number  Accessing Array Elements
+
+        // //Using the JavaScript Keyword new
+        // let ary1 = new Array("hello ", "Gavan", "Roshan", 444,);
+        // console.log(ary1);
+        // console.log(ary1[2]) // Accessing Array Elements
+        // ary1[444] = "Apna Digital Dokan"   //  Changing an Array Element
+        // console.log(ary1.length)
+
+
+        // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // console.log(num.length)
+        // console.log(num)
+
+        // // (1) push 
+
+        // //The push() method adds one or more elements to the end of an array and returns the new length of the arra
+        // num.push(10)
+
+        // // (2) Unshift 
+        // num.unshift(0)  // Elements to insert at the start of the array.
+
+        // // (3) pop 
+        // // The pop() method removes the last element from an array and returns that value to the caller. If you call pop() on an empty array, it returns undefined.
+        // num.pop()
+
+
+        //(4) shift 
+        // Javascript Shift is an inbuilt Array method that removes the first element from an array and returns the removed elemen
+        // let b = ["Gavan", "Naresh kumar ", "Roshan ", "Pardeep", "Amit ", "Rai ", "kumar ", "Pardeep"]
+        // console.log(b)
+        // console.log(b.shift())
+        // b.shift()
+        // IndexOf method 
+        // The indexOf() method returns the first index (position) of a specified value.
+        // console.log(b.indexOf("Pardeep"))
+        // console.log(b.indexOf("Pardeep", 3))
+        // console.log(b[5])
+        // console.log(b.indexOf("Pardeep"))
+
+        // Last IndexOf method
+
+
+        // console.log(b.lastIndexOf("Pardeep"))
+
+
+
+        //  JavaScript Array includes() Method
+
+        // The array.includes() method is used to know either a particular element is present in the array or not and accordingly, it returns true or false i.e, if the element is present, then it returns true otherwise false.
+
+        // let c = ["a", "b", "c", "d"]
+        // console.log(c)
+        // console.log(c.includes("f"))                   // True or False 
+
+
+        //JavaScript Array  Constants ++ 
+
+        // let name1 = ["Gavan", "Roshan"]
+        // let name2 = ["Pardeep ", "Amit ", "Raj"]
+        // let name3 = name1.concat(name2)
+        // console.log(name3.slice(4))   //JavaScript slice 
+
+        // let name = ["roshan", "gavan"]
+        // let name1 = ["Nar4es", "Pardeep "]
+        // let total_name = name.concat(name1)
+        // console.log(total_name)
+        // console.log(total_name.lastIndexOf("Pardeep"))
+        // total_name[2]= "Naresh"
+        // console.log(total_name[2])
+        // total_name.shift("hello ")
+
+
+        // var name4 = ["1", "2", "3"]
+        // var name5 = ["4", "5"]
+        // var total = [...name4, ...name5]
+        // console.log(total)
+
+        // var a = [1, 2, 333, 44, 45, 63, 67, 8, 9,44,63]
+        // // console.log(a.push(10))
+        // // console.log(a.unshift(0))
+
+        // console.log( a.indexOf(44,4))
+        // console.log(a.includes(63 ,6)) // returan ture and flase 
+
+
+
+
+        // for (var name1 = 0; name1 < 100; name1++) {
+        //     console.log("Good Morning ")
+        //     document.write("Good Morning ")
+        // }
+
+// var selected = prompt("Enter your Country name")
+
+//         var country_list = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+
+
+for (let i = 0; i < 30 ;  i++) {
+    console.log("hello " + i )
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
