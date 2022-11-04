@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Method is javascript </title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+
+        var a = 4308.488;
+
+
+        // No 1 Math property  Round 
+        var round = 3.5434
+        console.log(round)
+        var newNum = Math.round(round);
+
+        console.log(newNum);
+
+
+        // No 2  Math Ceil  property    
+        var ceil = 4.1111
+        console.log(ceil)
+        var newNum1 = Math.ceil(Math.random() * 20);
+        console.log(newNum1)
+
+
+
+
+        // No 03 Math Floor property 
+        var floor = 3.343
+        console.log(floor)
+        var newNum2 = Math.floor(floor);
+
+
+       var floor2 =  Math.floor(Math.random() * 10) + 5 ;
+       console.log(floor2)
+
+
+        // No 04 Math random property 
+
+        // var newNum3 = Math.random();
+        // console.log(newNum3)
+
+        // var fixed = random.tofixed(1)
+        // console.log(fixed)
+
+
+
+
+
+
+
+
+
+
+        // 
+
+        const obj = {
+            name: 'Tom',
+            country: 'Chile',
+            age: 30,
+        };
+
+        function getRandomProperty(obj) {
+            const keys = Object.keys(obj);
+
+            return keys[Math.floor(Math.random() * keys.length)];
+        }
+
+        console.log(getRandomProperty(obj)); // 👉️ name
+        console.log(getRandomProperty(obj)); // 👉️ age
+        console.log(getRandomProperty(obj)); // 👉️ name
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -246,69 +246,81 @@
 
 // assignment no 2
 
-var p =
-  "iSkillers IT Skills Training & Job creation Program 99 is provincial, classroom based and online training program, started by Tharparkar s first IT Company iSkillers to . We aim to train one million people across Sindh in next 10 years.";
+// var p =
+//   "iSkillers IT Skills Training & Job creation Program 99 is provincial, classroom based and online training program, started by Tharparkar s first IT Company iSkillers to . We aim to train one million people across Sindh in next 10 years.";
 
-var a = prompt("Enter the text ");
+// var a = prompt("Enter the text ");
 
-for (var i = 0; i < p.length; i++) {
-  // console.log(p[i]);
-  if (p.slice(i, i + a.length) === a) {
-    console.log("The index of >>>" + i);
-  } else {
-    console.log("Not found");
-  }
-}
+// for (var i = 0; i < p.length; i++) {
+//   // console.log(p[i]);
+//   if (p.slice(i, i + a.length) === a) {
+//     console.log("The index of >>>" + i);
+//   } else {
+//     console.log("Not found");
+//   }
+// }
 
-// assignment 03
+// // assignment 03
 
-var firstname = [
-  "Rick",
-  "Susan",
-  "Margaret",
-  "Ronald",
-  "Marie",
-  "Roger",
-  "Marlene",
-  "Jeff",
-  "Melvin",
-];
-var lastname = [
-  "Novak",
-  "Connor",
-  "Adelman",
-  "Barr",
-  "Broadbet",
-  "Lum",
-  "Donahue",
-  "Johnson",
-  "Forbis",
-];
-var fullname = [];
-for (var i = 0; i < firstname.length; i++) {
-  //   console.log(firstname[i]);
-  for (var j = 0; j < lastname.length; j++) {
-    // document.write(firstname[i] + " " + lastname[j], "<br/>");
-    fullname.push(firstname[i] + " " + lastname[j], "<br/>");
-  }
-}
-for (var k = 0; k < fullname.length; k++) {
-  document.write(fullname[k]);
-  document.write(fullname);
-}
+// var firstname = [
+//   "Rick",
+//   "Susan",
+//   "Margaret",
+//   "Ronald",
+//   "Marie",
+//   "Roger",
+//   "Marlene",
+//   "Jeff",
+//   "Melvin",
+// ];
+// var lastname = [
+//   "Novak",
+//   "Connor",
+//   "Adelman",
+//   "Barr",
+//   "Broadbet",
+//   "Lum",
+//   "Donahue",
+//   "Johnson",
+//   "Forbis",
+// ];
+// var fullname = [];
+// for (var i = 0; i < firstname.length; i++) {
+//   //   console.log(firstname[i]);
+//   for (var j = 0; j < lastname.length; j++) {
+//     // document.write(firstname[i] + " " + lastname[j], "<br/>");
+//     fullname.push(firstname[i] + " " + lastname[j], "<br/>");
+//   }
+// }
+// for (var k = 0; k < fullname.length; k++) {
+//   document.write(fullname[k]);
+//   document.write(fullname);
+// }
 
 /// assignment 03
-var p =
-  "iSkillers IT Skills Training & Job creation Program 99 is provincial, classroom based and online training program, started by Tharparkar s first IT Company iSkillers to . We aim to train one million people across Sindh in next 10 years.";
+// var p =
+//   "iSkillers IT Skills Training & Job creation Program 99 is provincial, classroom based and online training program, started by Tharparkar s first IT Company iSkillers to . We aim to train one million people across Sindh in next 10 years.";
 
-var a = prompt("Enter the text ");
+// var a = prompt("Enter the text ");
 
-for (var i = 0; i < p.length; i++) {
-  // console.log(p[i]);
-  if (p.slice(i, i + 9) === "iskiller") {
-    // console.log("The index of >>>" + i);
-    p = p.slice(0, i + 9) + "iskiller123+";
-  } else {
-    console.log("Not found");
-  }
+// for (var i = 0; i < p.length; i++) {
+//   // console.log(p[i]);
+//   if (p.slice(i, i + 9) === "iskiller") {
+//     // console.log("The index of >>>" + i);
+//     p = p.slice(0, i + 9) + "iskiller123+";
+//   } else {
+//     console.log("Not found");
+//   }
+// }
+
+///
+
+
+
+var end = new Date();
+var start = new Date();
+
+function login() {
+  console.log("Login function");
 }
+login();
