@@ -15,6 +15,10 @@ const item = {
   "lobish": 40,
   "gavan": undefined
 }
+
+const aray  = ( a , b , c  )>={
+  aray
+}
 console.log (item["Naresh"])
  console.log("Null")
 console.log("Number")

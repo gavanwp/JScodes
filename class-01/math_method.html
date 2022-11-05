@@ -42,44 +42,64 @@
         var newNum2 = Math.floor(floor);
 
 
-       var floor2 =  Math.floor(Math.random() * 10) + 5 ;
-       console.log(floor2)
+        var floor2 = Math.floor(Math.random() * 10) + 5;
+        console.log(floor2)
 
 
         // No 04 Math random property 
 
-        // var newNum3 = Math.random();
-        // console.log(newNum3)
-
-        // var fixed = random.tofixed(1)
-        // console.log(fixed)
+        let r = Math.random();
 
 
-
-
-
+        let a1 = 1;
+        let b1 = 100;
+        let r1_100 = a1 + (b1 - a1) * Math.random()
+        console.log(r1_100)
+        document.write(r1_100)
 
 
 
 
 
-        // 
+        console.log("3 raised to the power of 2 is ", Math.pow(3, 2))
+        console.log("2 raised to the power 12 is ", Math.pow(2, 12))
+        console.log("1 raised to the power of 2 is ", Math.pow(1, 2))
+        console.log(Math.pow(5, 20))
 
-        const obj = {
-            name: 'Tom',
-            country: 'Chile',
-            age: 30,
-        };
+        /// Square root 
 
-        function getRandomProperty(obj) {
-            const keys = Object.keys(obj);
+        console.log("Square root of 36 is ", Math.sqrt(36))
+        console.log("Square root of 70 is ", Math.sqrt(70))
+        console.log("Square root of 50 is ", Math.sqrt(50))
 
-            return keys[Math.floor(Math.random() * keys.length)];
-        }
+        // abs Function 
+        console.log("Absolute value of 5.645", Math.abs(5.645))
+        console.log("absolute value of 5.645 ", Math.abs(-5.645))
 
-        console.log(getRandomProperty(obj)); // 👉️ name
-        console.log(getRandomProperty(obj)); // 👉️ age
-        console.log(getRandomProperty(obj)); // 👉️ name
+
+        // Trinonometric Funcation 
+        console.log("The value of sin(pi) is ", Math.sin(Math.PI / 2))
+        console.log("The value of tan(pi) is ", Math.tan(Math.PI / 2))
+        console.log("The value of cos(pi) is ", Math.cos(Math.PI / 2))
+
+        // Min and Max Function 
+        console.log("Minimum value of 4 , 3,5 is ", Math.min(4, 3, 5))
+
+        console.log("Maximum value of 4 , 3,5 is ", Math.max(4, 3, 5))
+
+
+        let b = Math;
+        console.log(b)
+
+
+
+
+
+
+
+
+
+
 
 
 
