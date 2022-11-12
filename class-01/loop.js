@@ -317,8 +317,7 @@
 
 
 
-var end = new Date();
-var start = new Date();
+
 
 function login() {
   console.log("Login function");

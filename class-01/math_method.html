@@ -16,63 +16,81 @@
     <script>
 
 
-        var a = 4308.488;
+
 
 
         // No 1 Math property  Round 
-        var round = 3.5434
+        var round = 3.5455
         console.log(round)
         var newNum = Math.round(round);
+        console.log(" return the round value  of  ", newNum);   // 5 > 1 add and 5 < same value return 
 
-        console.log(newNum);
+
+
+
 
 
         // No 2  Math Ceil  property    
-        var ceil = 4.1111
-        console.log(ceil)
-        var newNum1 = Math.ceil(Math.random() * 20);
-        console.log(newNum1)
 
+        var ceil = 4.9111
+        console.log("The value of ceil is  ", ceil)
+        var newNum1 = Math.ceil(ceil)
+        console.log("This is the ceil Method in javascript ", newNum1)   // a value 5 > add one value or x < 5  add one value 
+
+        // var newNum1 = Math.ceil(Math.random() * 20); 
 
 
 
         // No 03 Math Floor property 
-        var floor = 3.343
-        console.log(floor)
-        var newNum2 = Math.floor(floor);
+
+        // The Math.floor() function always rounds down and returns the largest integer less than or equal to a given number.
+        var floor = 3.543
+        console.log(" floor ", floor)
+        var p1 = Math.floor(floor)
+        console.log("Math floor ", p1)
 
 
-        var floor2 = Math.floor(Math.random() * 10) + 5;
-        console.log(floor2)
+        var newNum1 = Math.floor(Math.random() * 10) + 5;
+        console.log(" Math.floor(Math.random() * 10) + 5;", newNum1)
 
 
         // No 04 Math random property 
 
         let r = Math.random();
 
+        console.log("Random value ", r)
 
-        let a1 = 1;
-        let b1 = 100;
-        let r1_100 = a1 + (b1 - a1) * Math.random()
-        console.log(r1_100)
-        document.write(r1_100)
+        let a1 = 4;
+        let a2 = 2;
+        let a3 = 3;
+        let a4 = a1 + a2 - a3 * a1 + (a1 / a2) * Math.random(5)
+        console.log(" a1 + a2 - a3 * a2 +( a1 / a3) ", a4)
 
 
 
 
+
+
+
+
+        //  Math Power Function 
+
+        console.log("5 raised to the power of 2 is ", Math.pow(5, 2))
 
         console.log("3 raised to the power of 2 is ", Math.pow(3, 2))
         console.log("2 raised to the power 12 is ", Math.pow(2, 12))
         console.log("1 raised to the power of 2 is ", Math.pow(1, 2))
         console.log(Math.pow(5, 20))
 
-        /// Square root 
+        /// Square root  Function
 
-        console.log("Square root of 36 is ", Math.sqrt(36))
+        console.log("The Square root of 8281 is ", Math.sqrt(8281))
         console.log("Square root of 70 is ", Math.sqrt(70))
         console.log("Square root of 50 is ", Math.sqrt(50))
 
         // abs Function 
+        //The Math.abs() function returns the absolute value of a number.
+
         console.log("Absolute value of 5.645", Math.abs(5.645))
         console.log("absolute value of 5.645 ", Math.abs(-5.645))
 
@@ -83,6 +101,7 @@
         console.log("The value of cos(pi) is ", Math.cos(Math.PI / 2))
 
         // Min and Max Function 
+        console.log("Minimum value of 33, 23, 443, 233 is  ", Math.min(33, 23, 443, 233))
         console.log("Minimum value of 4 , 3,5 is ", Math.min(4, 3, 5))
 
         console.log("Maximum value of 4 , 3,5 is ", Math.max(4, 3, 5))

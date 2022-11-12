@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+
+    <style>
+
+        *body{
+            background-color: #9d00c5;
+        }
+    </style>
+    <script>
+        // setTimeout(function () {
+        //     console.log("setTimeout")
+        // }, 2000)
+
+        // setInterval(function () {
+        //     console.log("setInterval")
+
+        // }, 2000)
+
+
+
+
+        function Submit() {
+
+            var Name = document.getElementById("Name")
+            var Father = document.getElementById("Father")
+            var email = document.getElementById("email")
+            var password = document.getElementById("password")
+            var massage = document.getElementById("massage")
+
+
+
+            if (Name.value === "") {
+                massage.style.color = "red";
+                massage.innerHTML = "First name required !"
+
+
+            } else if (Father.value === "") {
+                massage.style.color = "red";
+                massage.innerHTML = "Last name is required !"
+            }
+
+            else if (email.value === "") {
+                massage.style.color = "red"
+                massage.innerHTML = "Email is requried !"
+            }
+            else if (password.value === "") {
+                massage.style.color = "red"
+                massage.innerHTML = "password is requried !"
+            }
+
+            else {
+                massage.style.color = "green"
+                massage.innerHTML = "Login Successfully";
+            }
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div> <input type="text" id="Name" name="name" placeholder="Name" /> </div>
+
+
+        <div> <input type="text" id="Father" name="name" placeholder="Father Name" /> </div>
+
+        <div> <input type="email" name="email" id="email"> </div>
+        <div> <input type="password" name="password" id="password"> </div>
+
+        <p id="massage"></p>
+        <button onclick=" Submit() ">Submit</button>
+
+    </div>
+
+</body>
+
+</html>

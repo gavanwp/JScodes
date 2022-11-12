@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+
+    <style>
+        body {
+            background-color: #FAE6FF;
+        }
+
+        .maindiv {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 180px;
+        }
+
+        .container {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 5px;
+
+        }
+
+        .myclass {
+            margin-top: -20px;
+            height: 60px;
+            width: 100%;
+            background: linear-gradient(90deg, #293b90, #98189a);
+        }
+
+        .myclass>h2 {
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            font-weight: 700;
+            padding-top: 20px;
+        }
+
+        .h1 {
+            cursor: pointer;
+            text-align: center;
+            color: #98189a;
+            font-weight: bold;
+
+        }
+
+        .text1 {
+            display: none;
+
+        }
+
+        .edittxt {
+            display: none;
+            cursor: pointer;
+            height: 30px;
+            width: 200px;
+            margin-top: 40px;
+            margin-left: 100px;
+            background: linear-gradient(90deg, #293b90, #98189a);
+            color: white;
+
+        }
+
+        .update {
+            display: block;
+            cursor: pointer;
+            height: 30px;
+            width: 200px;
+            margin-top: 40px;
+            margin-left: 100px;
+            background: linear-gradient(90deg, #293b90, #98189a);
+           border-radius: 5px;
+            color: white;
+
+        }
+
+        input {
+            width: 200px;
+            margin-left: 90px;
+            height: 20px;
+            border: 2px solid #98189a;
+            color: #98189a;
+            outline: none;
+            padding: 4px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="./colorlogo-01.png"  width="100px"  id="image" oncontextmenu="src='./pexels-anjana-c-674010.jpg' ">  
+
+    <img src="./colorlogo-01.png"  width="100px"  id="image" ondblclick="src='./pexels-anjana-c-674010.jpg' ">
+    <img src="./colorlogo-01.png"  width="100px"  id="image" onmousedown="src='./pexels-anjana-c-674010.jpg' "> -->
+
+    <div class="maindiv">
+        <div class="container">
+
+            <div class="myclass">
+                <h2>Mouse Event</h2>
+
+
+
+            </div>
+            <h1 id="h1" class="h1" onclick=" add()">Click Update Button</h1>
+            <input type="text" id="headinginput" class="text1" />
+            <button onclick="add()" class="update" id="update"> Update</button>
+            <button onclick="function1()" class="edittxt" id="edittXt"> Edit text</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function add() {
+            var hinput = document.getElementById("headinginput");
+            hinput.style.display = "block"
+            var h1 = document.getElementById("h1");
+            h1.innerHTML = hinput.value
+
+            var editTxt = document.getElementById("edittXt");
+            var upDate = document.getElementById("update")
+
+            if (hinput.value === "") {
+                h1.innerHTML = ("Enter Your text !")
+
+                
+
+
+            } else if (hinput.value === hinput.value) {
+                hinput.style.display = "none"
+                upDate.style.display = "none"
+                editTxt.style.display = "block"
+            }
+        }
+
+        function function1() {
+            var hinput = document.getElementById("headinginput");
+            var h1 = document.getElementById("h1")
+            var uPdate = document.getElementById("update")
+            var edIttxt = document.getElementById("edittXt")
+
+            h1.innerHTML = hinput.value
+            hinput.style.display = "block"
+
+            if (hinput.value === hinput.value) {
+                uPdate.style.display = "block"
+                edIttxt.style.display = "none"
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+      // function img2() {
+      //     var h2 = document.getElementById("h2");
+      //     h2.innerHTML = prompt("Enter the value");
+      // }
+
+      // function img3() {
+      //     var h3 = document.getElementById("h3");
+      //     h3.innerHTML = prompt("Enter the value");
+      // }
+
+      // function img4() {
+      //     var h4 = document.getElementById("h4");
+      //     h4.innerHTML = prompt("Enter the value");
+      // }
+
+      // function img5() {
+      //     var h5 = document.getElementById("h5");
+      //     h5.innerHTML = prompt("Enter the value");
+      // }
+
+      // function img6() {
+      //     var h6 = document.getElementById("h6");
+      //     h6.innerHTML = prompt("Enter the value");
+      // }
+    </script>
+</body>
+
+</html>

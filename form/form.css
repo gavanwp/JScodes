@@ -1,0 +1,117 @@
+body {
+  background-color: #fae6ff;
+}
+
+.mydiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.maindiv {
+  width: 540px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+
+  background: linear-gradient(90deg, #293b90, #98189a);
+}
+
+.maindiv > h3 {
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+}
+
+.div2 > img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+button:hover {
+  color: black;
+  border-top: 2px solid #851e98;
+  border-right: 2px solid #851e98;
+  border-left: 2px solid #851e98;
+  cursor: pointer;
+  font-weight: 500;
+}
+.button1 {
+  width: 218px;
+  height: 40px;
+  color: #851e98;
+  background-color: white;
+  border-top: 1px solid #861e985e;
+  border-right: 1px solid #861e985e;
+  border-left: 1px solid #861e985e;
+  border-bottom: 2px solid #851e98;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+.button1 + p {
+  font-size: 10px;
+}
+
+.container {
+  background-color: white;
+  width: 540px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding-top: 70px;
+  margin-bottom: 40px;
+}
+
+.input {
+  width: 440px;
+  height: 35px;
+  margin-bottom: 18px;
+  border: 2px solid #851e98;
+  color: #851e98;
+  font-size: 16px #851e98;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+}
+
+::placeholder {
+  color: #851e98;
+  opacity: 1;
+  font-weight: 500px;
+  padding-left: 4px;
+}
+.text {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.massage {
+  font-size: 14px;
+  margin-top: 2px;
+  margin-left: 5px;
+  display: block;
+}
+
+.signUp {
+  width: 230px;
+  height: 35px;
+  background: linear-gradient(90deg, #293b90, #98189a);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  border-radius: 15px;
+}
+
+.signUp:hover {
+  color: white;
+}
