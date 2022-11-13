@@ -77,7 +77,7 @@
             margin-top: 40px;
             margin-left: 100px;
             background: linear-gradient(90deg, #293b90, #98189a);
-           border-radius: 5px;
+            border-radius: 5px;
             color: white;
 
         }
@@ -91,6 +91,12 @@
             outline: none;
             padding: 4px;
 
+        }
+
+        .myimage {
+            display: none;
+            width: 200px;
+            height: 100px;
         }
     </style>
 </head>
@@ -121,10 +127,13 @@
 
 
 
+
+
     <script>
         function add() {
             var hinput = document.getElementById("headinginput");
             hinput.style.display = "block"
+
             var h1 = document.getElementById("h1");
             h1.innerHTML = hinput.value
 
@@ -134,13 +143,11 @@
             if (hinput.value === "") {
                 h1.innerHTML = ("Enter Your text !")
 
-                
-
-
             } else if (hinput.value === hinput.value) {
                 hinput.style.display = "none"
                 upDate.style.display = "none"
                 editTxt.style.display = "block"
+
             }
         }
 
@@ -159,6 +166,8 @@
 
             }
         }
+
+
 
 
 
@@ -194,6 +203,14 @@
       //     h6.innerHTML = prompt("Enter the value");
       // }
     </script>
+
+
+  
+
+
+
+
+
 </body>
 
 </html>

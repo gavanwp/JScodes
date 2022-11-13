@@ -7,6 +7,7 @@ body {
   flex-direction: row;
   justify-content: center;
   position: relative;
+  
 }
 
 .maindiv {
@@ -61,7 +62,7 @@ button:hover {
 .container {
   background-color: white;
   width: 540px;
-  height: 640px;
+  height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +74,7 @@ button:hover {
 
 .input {
   width: 440px;
-  height: 35px;
+  height: 30px;
   margin-bottom: 18px;
   border: 2px solid #851e98;
   color: #851e98;
@@ -81,13 +82,14 @@ button:hover {
   font-weight: 500;
   border-radius: 5px;
   outline: none;
+  padding: 5px;
 }
 
 ::placeholder {
   color: #851e98;
   opacity: 1;
   font-weight: 500px;
-  padding-left: 4px;
+ 
 }
 .text {
   font-size: 12px;
@@ -108,7 +110,7 @@ button:hover {
   color: white;
   font-size: 16px;
   cursor: pointer;
-
+margin-top: 20px;
   border-radius: 15px;
 }
 
