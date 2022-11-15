@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment No 03 </title>
+</head>
+<style>
+    body {
+        background-color: #0093e9;
+        background-image: linear-gradient(79deg, #0093e9 0%, #77c8ed 100%);
+    }
+
+    div {
+        width: 600px;
+        height: 100px;
+        background-color: #84ebf7cb;
+        padding-top: 80px;
+        position: relative;
+        top: 250px;
+        left: 450px;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .img {
+        width: 15px;
+        margin-top: 6px;
+    }
+
+    .button {
+        height: 50px;
+        width: 50px;
+        background-color: rgba(0, 55, 255, 0.719);
+        padding-bottom: 6px;
+        border-color: rgba(0, 55, 255, 0.719);
+    }
+
+    .inPut {
+        height: 35px;
+        width: 440px;
+        border: 3px solid rgba(0, 55, 255, 0.719);
+        padding: 5px;
+        font-size: 18px;
+        outline: none;
+        margin-left: 50px;
+    }
+
+    .p {
+        color: red;
+        margin-left: 50px;
+        margin-top: 2px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+        var container = document.getElementById("container");
+
+        var input = document.createElement("input");
+        container.appendChild(input);
+        input.setAttribute("class", "inPut");
+        input.setAttribute("Placeholder", "Add a task here...");
+        input.setAttribute("maxlength", "14");
+        var Button = document.createElement("button");
+        container.appendChild(Button);
+        Button.setAttribute("class", "button");
+        var img = document.createElement("img");
+        Button.appendChild(img);
+        img.setAttribute("src", "./plus.png");
+        img.setAttribute("class", "img");
+        Button.setAttribute("onClick", "add()");
+        var p = document.createElement("p");
+        container.appendChild(p);
+        var paragraph_text = document.createTextNode("Plese enter the value ");
+        p.appendChild(paragraph_text);
+        p.setAttribute("class", "p");
+
+        function add() {
+            if (input.value === "") {
+                p.style.display = "block";
+                input.focus();
+                setTimeout(function () {
+                    p.style.display = "none";
+                }, 2000);
+            } else {
+                p.style.display = "none";
+                console.log(input.value);
+            }
+        }
+    </script>
+</body>
+
+</html>

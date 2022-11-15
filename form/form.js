@@ -6,9 +6,6 @@ function Submit() {
   var cnic = document.getElementById("cnic");
   var number = document.getElementById("number").value;
   var massage = document.getElementById("massage");
-  var email1 =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  console.log(email1);
 
   if (Name.value === "") {
     massage.style.color = "red";
@@ -51,33 +48,14 @@ function Submit() {
     setTimeout(function () {
       massage.style.display = "none";
     }, 2000);
-
-    if (cnic.value.length < 1) {
-      massage.style.display = "block";
-      massage.style.color = "red";
-      massage.innerHTML = "Please enter your CNIC number";
-
-      setTimeout(function () {
-        massage.style.display = "none";
-      }, 2000);
-    }
   } else if (number.length !== 11) {
     massage.style.display = "block";
     massage.style.color = "red";
     massage.innerHTML = "Please 11 character in mobile number";
 
     setTimeout(function () {
-      massage.style.display = "none";
+      massage.style.display = "none";p
     }, 2000);
-    if (number.length < 1) {
-      massage.style.display = "block";
-      massage.style.color = "red";
-      massage.innerHTML = "Please enter your mobile number";
-
-      setTimeout(function () {
-        massage.style.display = "none";
-      }, 2000);
-    }
   } else {
     massage.style.display = "block";
     massage.style.color = "green";

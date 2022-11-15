@@ -116,7 +116,7 @@
 
 
             </div>
-            <h1 id="h1" class="h1" onclick=" add()">Click Update Button</h1>
+            <h1 id="h1" class="h1" onclick=" add()"></h1>
             <input type="text" id="headinginput" class="text1" />
             <button onclick="add()" class="update" id="update"> Update</button>
             <button onclick="function1()" class="edittxt" id="edittXt"> Edit text</button>
@@ -130,8 +130,12 @@
 
 
     <script>
+
+        var heading1 = document.getElementsByTagName("h1")
+        heading1[0].innerHTML = "Click Update Button!"
         function add() {
             var hinput = document.getElementById("headinginput");
+        
             hinput.style.display = "block"
 
             var h1 = document.getElementById("h1");
@@ -139,9 +143,12 @@
 
             var editTxt = document.getElementById("edittXt");
             var upDate = document.getElementById("update")
+          
 
             if (hinput.value === "") {
-                h1.innerHTML = ("Enter Your text !")
+                h1.innerHTML = ("Click Update Button !")
+                hinput.value = "Click Update Button !"
+               
 
             } else if (hinput.value === hinput.value) {
                 hinput.style.display = "none"
@@ -167,6 +174,7 @@
             }
         }
 
+        
 
 
 
@@ -205,11 +213,11 @@
     </script>
 
 
-  
-
-
-
-
+<!-- <div><a href="./Top-HD-sad-quotes-for-whatsapp-status-in-hindi-Pics-Images-Download-Free.gif" download >download This video</a>
+<p title="hi" >hello</p>
+<p contenteditable="" >Hello world</p>
+<marquee behavior="" direction="right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, blanditiis?</marquee>
+</div> -->
 
 </body>
 
