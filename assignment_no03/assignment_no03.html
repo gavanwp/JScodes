@@ -8,19 +8,23 @@
     <title>assignment No 03 </title>
 </head>
 <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
     body {
-        background-color: #0093e9;
-        background-image: linear-gradient(79deg, #0093e9 0%, #77c8ed 100%);
+       
+
+        background: linear-gradient(to right, hsl(211deg 68% 53%) 0%,hsl(192deg 97% 50%));
+
     }
 
-    div {
+    #container {
         width: 600px;
         height: 100px;
         background-color: #84ebf7cb;
-        padding-top: 80px;
-        position: relative;
-        top: 250px;
-        left: 450px;
+      
+       
         border-radius: 5px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
@@ -35,7 +39,8 @@
         width: 50px;
         background-color: rgba(0, 55, 255, 0.719);
         padding-bottom: 6px;
-        border-color: rgba(0, 55, 255, 0.719);
+        /* border-color: rgba(0, 55, 255, 0.719); */
+        border: none;
     }
 
     .inPut {
@@ -57,7 +62,9 @@
 </style>
 
 <body>
-    <div id="container"></div>
+    <div class="maindiv">
+        <div id="container"></div>
+    </div>
 
     <script>
         var container = document.getElementById("container");

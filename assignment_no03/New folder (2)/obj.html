@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <input type="text" id="input">
+        <button onClick="Car()">Click me </button>
+    </div>
+    <script>
+
+        var add = {
+            name: "gavan kumar",
+            lastName : "KUmar",
+
+           ages :   [ 33 , 44, 32 , 23 ]
+        }
+
+        console.log(add)
+        add.name = "Roshan "
+        console.log(add)
+        add.name = "Raj"
+        console.log(add)
+
+        delete add.lastName 
+        console.log(add)
+        console.log("email" in add)
+
+
+        for (let i in add ) {
+          console.log(i + " " +  add[i])
+
+        }
+        console.log(add.ages[2])
+
+        var input = document.getElementById("input");
+
+        function add(name) {
+            this.name = name
+        }
+        var input = new add(input.value)
+        console.log(add)
+
+        function Car() {
+            alert("hello dear ")
+            var name = input.value;
+            console.log(name)
+        }
+
+
+
+        function Car(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        var promt1 = prompt()
+        var promt2 = prompt()
+        var prompt3 = prompt()
+        var  input = document.getElementById(input)
+        var myCar = new Car(promt1, promt2, prompt3);
+        console.log(myCar.make)
+        console.log(myCar.model)
+        console.log(myCar.year)
+    // </script>
+</body>
+
+</html>

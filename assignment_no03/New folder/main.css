@@ -1,0 +1,233 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    hsl(211deg 68% 53%) 0%,
+    hsl(192deg 97% 50%)
+  );
+}
+
+#maindiv {
+  height: 710px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 580px;
+  background-color: hsl(200deg 66% 88%);
+  border-radius: 20px;
+  padding: 30px;
+}
+#listdiv {
+  height: 60%;
+  overflow: auto;
+}
+
+#inputdiv {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 3px solid hsl(215deg 65% 53%);
+}
+
+#button {
+  height: 60px;
+  width: 82px;
+  background-color: hsl(215deg 65% 53%);
+  cursor: pointer;
+
+  border: none;
+}
+
+#img {
+  height: 40px;
+  width: 40px;
+}
+
+#input {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.list_1 {
+  margin-top: 40px;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  scroll-behavior: auto;
+}
+
+.olist {
+  color: hsl(215deg 65% 53%);
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  list-style-type: none;
+}
+
+.mybutton {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 {
+  background-color: hsl(209deg 80% 84%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#img1 {
+  height: 20px;
+  width: 20px;
+}
+
+#button2 {
+  background-color: hsl(209deg 80% 84%);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#img2 {
+  height: 15px;
+  width: 15px;
+}
+
+.p {
+  color: red;
+
+  margin-top: 2px;
+  display: none;
+}
+#secoundp {
+  color: green;
+  display: none;
+  margin-top: 2px;
+}
+
+.borderline {
+  width: 100%;
+  border-top: 4px solid hsl(209deg 60% 78%);
+  margin-top: 50px;
+}
+
+#bgcolorlastdiv {
+  background: hsl(215deg 65% 53%);
+  height: 60px;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+
+.paragraph {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-left: 10px;
+}
+
+#lst_button {
+  background-color: rgb(245, 245, 245);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.img5 {
+  height: 20px;
+  width: 20px;
+}
+
+#btdiv {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#alldelete {
+  width: 100px;
+  height: 50px;
+  background: hsl(192deg 97% 50%);
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+#inpuT {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 100px;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  margin-left: 10px;
+}
