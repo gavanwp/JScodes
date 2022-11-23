@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #container {
+        background-color: #D9AFD9;
+        background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+        width: 100%;
+        height: 720px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sub_div {
+        width: 50%;
+        height: 700px;
+        background-color: white;
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+        overflow: auto;
+    }
+
+    #div1 {
+
+        padding: 20px;
+    }
+
+    #input {
+        width: 80%;
+        height: 30px;
+        outline: none;
+    }
+
+    #textaera {
+        outline: none;
+        margin-top: 20px;
+        width: 78%;
+        height: 5pc;
+        padding: 10px;
+    }
+
+    #submit {
+        width: 20%;
+        height: 30px;
+        border: none;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        border-radius: 10px;
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    #show {
+        width: 20%;
+        height: 30px;
+        border: none;
+        background-color: #21D4FD;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+        margin-left: 300px;
+        border-radius: 10px;
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    #div2 {
+        /* border: 2px solid red; */
+        width: 99%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #post {
+        /* border: 2px solid red; */
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background: white;
+        padding: 10px;
+        scroll-behavior: auto;
+    }
+
+    #imgdiv {
+        display: flex;
+    }
+
+    #img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #username {
+
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    #time {
+        font-size: 12px;
+    }
+
+    #texT {
+        font-size: 14px;
+        margin-top: 40px;
+        font-weight: 400;
+
+    }
+
+    #imgae2 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #demodiv {
+        width: 100%;
+        height: 30px;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+    }
+
+    .likediv {
+        width: 33%;
+        height: 30px;
+        /* border: 2px solid forestgreen; */
+        display: flex;
+
+
+    }
+
+    .like {
+        width: 30px;
+        margin-left: 20px;
+        cursor: pointer;
+
+    }
+
+    .likeheading {
+        font-size: 18px;
+        margin-top: 6px;
+        color: #A5A5A5;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    #comment {
+
+        margin-left: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+
+    }
+
+
+    #img5 {
+        margin-left: 20px;
+        width: 30px;
+
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <!-- <textarea name="" id="text" cols="30" rows="10"></textarea> -->
+
+    </div>
+
+    <script>
+        var container = document.getElementById("container");
+        var sub_div = document.createElement("div")
+        container.appendChild(sub_div)
+        sub_div.setAttribute("id", "sub_div")
+        var div1 = document.createElement("div")
+        sub_div.appendChild(div1)
+        div1.setAttribute("id", "div1")
+
+        var input = document.createElement("input")
+        div1.appendChild(input)
+        input.setAttribute("id", "input")
+        input.setAttribute("placeholder", "Enter Your Username")
+
+        var textarea = document.createElement("textarea")
+        div1.appendChild(textarea)
+        textarea.setAttribute("placeholder", " Type description")
+        textarea.setAttribute("id", "textaera")
+
+        var submitButton = document.createElement("button")
+        div1.appendChild(submitButton)
+        var submitButtonText = document.createTextNode("Submit")
+        submitButton.appendChild(submitButtonText)
+        submitButton.setAttribute("onClick", "add()")
+        submitButton.setAttribute("id", "submit")
+
+
+        var showdata = document.createElement("button")
+        sub_div.appendChild(showdata)
+        var showdataText = document.createTextNode("Show Data")
+        showdata.appendChild(showdataText)
+        showdata.setAttribute("onClick", "showme()")
+        showdata.setAttribute("id", "show")
+
+        var div2 = document.createElement("div")
+        sub_div.appendChild(div2)
+        div2.setAttribute("id", "div2")
+
+        var arry = [];
+        function add() {
+            // arry.push(input.value);
+            // arry.push(textarea.value);
+          var obj = {
+            name: input.value,
+            bio: textarea.value
+          }
+          arry.push(obj)
+
+        }
+
+
+
+        function showme() {
+
+
+            for (let i = 0; i < arry.length; i++) {
+                // main div 
+                var post = document.createElement("div")
+                div2.appendChild(post)
+                post.setAttribute("id", "post")
+                // profile and username div 
+                var imgdiv = document.createElement("div")
+                post.appendChild(imgdiv)
+                imgdiv.setAttribute("id", "imgdiv")
+                var img = document.createElement("img")
+                imgdiv.appendChild(img)
+                img.setAttribute("src", "user.png")
+                img.setAttribute("id", "img")
+                var username = document.createElement("h2");
+                imgdiv.appendChild(username);
+                // INput  Value 
+                var usernameTExt = document.createTextNode(input.value);
+                username.appendChild(usernameTExt);
+                username.setAttribute("id", "username")
+                // Time and date 
+                var d = new Date();
+                var time = document.createElement("p")
+                username.appendChild(time)
+                var timeData = document.createTextNode(d.getHours() , )
+                time.appendChild(timeData)
+                var timeData1 = document.createTextNode( " :" + d.getMinutes())
+                time.appendChild(timeData1)
+                time.setAttribute("id", "time")
+                console.log(time)
+                // post description 
+                var texT = document.createElement("h2");
+                post.appendChild(texT);
+                var usernameTExt1 = document.createTextNode(textarea.value);
+                texT.appendChild(usernameTExt1);
+                texT.setAttribute("id", "texT")
+                // post Image 
+                var image2 = document.createElement("img")
+                post.appendChild(image2)
+                image2.setAttribute("src", "designer.jpg")
+                image2.setAttribute("id", "imgae2")
+
+
+                // Like Button
+                var demoDiv = document.createElement("div")
+                post.appendChild(demoDiv)
+                demoDiv.setAttribute("id", "demodiv")
+                var likediv = document.createElement("div")
+                demoDiv.appendChild(likediv)
+                likediv.setAttribute("class", "likediv")
+                var image3 = document.createElement("img")
+                likediv.appendChild(image3)
+                image3.setAttribute("src", "like.png")
+                image3.setAttribute("class", "like")
+
+                var likeheading = document.createElement("h2")
+                likediv.appendChild(likeheading)
+                var likeText = document.createTextNode("Like")
+                likeheading.appendChild(likeText)
+                likeheading.setAttribute("class", "likeheading")
+
+                //comment Button
+                var comment = document.createElement("div")
+                demoDiv.appendChild(comment)
+                comment.setAttribute("class", "likediv")
+                var image4 = document.createElement("img")
+                comment.appendChild(image4)
+                image4.setAttribute("src", "message.png")
+                image4.setAttribute("id", "comment")
+                var commentHeading = document.createElement("h2")
+                comment.appendChild(commentHeading)
+                var commentText = document.createTextNode("Comment")
+                commentHeading.appendChild(commentText)
+                commentHeading.setAttribute("class", "likeheading")
+                // Share Button 
+                var share = document.createElement("div")
+                demoDiv.appendChild(share)
+                share.setAttribute("class", "likediv")
+                var image5 = document.createElement("img")
+                share.appendChild(image5)
+                image5.setAttribute("src", "share.png")
+                image5.setAttribute("id", "img5")
+                var commentHeading = document.createElement("h2")
+                share.appendChild(commentHeading)
+                var commentText = document.createTextNode("Share")
+                commentHeading.appendChild(commentText)
+                commentHeading.setAttribute("class", "likeheading")
+
+                // random 
+
+
+
+            }
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
