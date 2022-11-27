@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#contaienr {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#box {
+  width: 40%;
+  height: auto;
+  background-color: hsl(5deg 13% 84%);
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-bottom: 60px;
+}
+
+.Name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#div {
+  width: 100%;
+
+  /* border: 2px solid pink; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.subdiv {
+  width: 150px;
+  height: 10px;
+  padding: 10px;
+  /* border: 2px solid red; */
+  background-color: hsl(359deg 24% 35%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.subdiv > h2 {
+  color: white;
+}
+
+#div2 {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
