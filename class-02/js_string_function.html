@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <title>JS String Functions </title>
     <script>
-        var strg = ("this is of  string ");
-        console.log(strg);
-
+        var strg = ("this is of            string ");
+     var a = strg.trim()
+     console.log(a)
+     
+    
         //First occurence of a substring
         var position = strg.indexOf("of");
         console.log(position);
@@ -19,15 +21,15 @@
 
         // Substring form a string 
         var substrg = strg.slice(1, 7);
-        console.log(substrg); 
+        console.log( "slice"+ substrg); 
 
         
 
         var substrg = strg.substring(1, 7);
-        console.log(substrg);
+        console.log( "substring"+ substrg);
 
         var substrg = strg.substr(1, 7);
-        console.log(substrg);
+        console.log( "strg" + substrg);
 
         var replaced = strg.replace("string", " Gavan ");
         console.log(strg);

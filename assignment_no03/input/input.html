@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hide {
+        display: none;
+    }
+
+    .hide {
+        width: 20px;
+        cursor: pointer;
+
+    }
+
+    .show {
+        width: 19px;
+        cursor: pointer;
+
+    }
+
+    .input1 {
+        width: 20%;
+        border: 2px solid #811F98;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #811F98;
+
+    }
+
+    ::placeholder {
+        color: #811F98;
+    }
+</style>
+
+<body>
+    <div class="input1">
+        <input type="password" id="myInput" placeholder="Type your password">
+        <div onclick="add()" id="div"> <img src="./view.png" alt="" id="show" class="show">
+            <img src="./closed-eyes.png" class="hide" alt="" id="hide">
+        </div>
+       
+    </div>
+
+
+
+
+    <script>
+
+        var show = document.getElementById("show")
+        var input = document.getElementById("myInput");
+        var hide = document.getElementById("hide")
+        
+        
+        function add() {
+
+            if (input.type === "password") {
+                input.type = "text";
+                
+                hide.style.display = "block"
+                show.style.display = "none"
+
+            } else {
+                input.type = "password";
+                hide.style.display = "none"
+                show.style.display = "block"
+             
+            }
+        }
+        // console.log(document.body.lastElementChild)
+        var arry =  document.body.children[1]
+        console.log(arry.nextElementSibling)
+
+
+    </script>
+</body>
+
+</html>

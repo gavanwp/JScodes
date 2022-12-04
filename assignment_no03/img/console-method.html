@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #box {
+        width: 60vw;
+
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #img {
+        width: 20vw;
+        height: 45vh;
+        margin-right: 20px;
+        cursor: zoom-in;
+    }
+
+    .heading {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    #div1 {
+        /* border: 2px solid gray; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #div1_sub_div1 {
+        display: flex;
+    }
+
+    #star {
+        width: 80px;
+        height: 80px;
+        margin-top: -32px;
+    }
+
+    #a {
+        text-decoration: none;
+        margin-left: 10px;
+        color: #8bc1cd;
+        font-size: 14px;
+    }
+
+    #a:hover {
+        text-decoration: underline;
+    }
+
+    .border_right {
+        margin-left: 10px;
+        font-weight: 600;
+    }
+
+    #div1_sub_div2 {
+        /* border: 2px solid red; */
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .shareButton {
+        width: 25px;
+        height: 25px;
+    }
+
+    .div2 {
+        width: 100%;
+        height: 50px;
+        /* border: 2px solid darkblue; */
+        margin-top: -25px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #d8d8d8;
+        text-align: center;
+    }
+
+    .Brand {
+        font-size: 14px;
+        color: #9e9e9e;
+        font-weight: 400;
+        margin-top: -1px;
+    }
+
+    .a3 {
+        text-decoration: none;
+        margin-left: 10px;
+        color: #8bc1cd;
+        font-size: 14px;
+    }
+
+    .a3:hover {
+        text-decoration: underline;
+    }
+
+    .pricing {
+        margin-top: -12px;
+
+        border-bottom: 1px solid #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .heading1 {
+        color: #f86e46;
+    }
+
+    .salepricingdiv {
+        display: flex;
+        margin-top: -20px;
+    }
+
+    .heading2 {
+        font-size: 16px;
+        color: #9e9e9e;
+        text-decoration: line-through;
+        margin-top: -2px;
+        margin-right: 10px;
+    }
+
+    .span2 {
+        color: #000000;
+        font-size: 16px;
+        margin-top: -2px;
+        font-weight: 600;
+    }
+
+    #div3 {
+        /* border: 2px solid teal; */
+        width: 100%;
+        display: flex;
+
+        margin-top: 10px;
+    }
+
+    .size {
+        font-size: 16px;
+        color: #9e9e9e;
+        font-weight: 400;
+
+    }
+
+    #subdiv3 {
+        /* border: 2px solid olive; */
+        margin-left: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #subdiv3>button {
+        color: #f86e46;
+        background-color: white;
+        border-color: #f86e46;
+        width: 100%;
+        height: 30px;
+        outline: none;
+        margin-top: 10px;
+        font-weight: 300;
+
+    }
+</style>
+
+<body>
+    <div id="container"></div>
+
+    <button onclick="add()">LOve You</button>
+    <script>
+        console.log("Good Morning");
+        console.error("This is a error");
+        console.warn("This is a warring");
+        console.assert(50 > 70);
+        console.clear();
+
+        var obj = {
+            Name: "Gavan kumar",
+            Father: "Anbji",
+            Class: 12,
+        };
+        console.table(obj);
+        console.time(obj);
+        console.timeEnd(obj);
+
+        function add() {
+            var i = 0;
+            while (i < 2000) {
+                var container = document.getElementById("container");
+
+                var box = document.createElement("div");
+                container.appendChild(box);
+                box.setAttribute("id", "box");
+
+                var imgdiv = document.createElement("div");
+                box.appendChild(imgdiv);
+                imgdiv.setAttribute("id", "imgdiv");
+
+                var img = document.createElement("img");
+                img.setAttribute(
+                    "src",
+                    "https://static-01.daraz.pk/p/7b9617309323b062cc1963e1eb175548.jpg"
+                );
+                imgdiv.appendChild(img);
+                img.setAttribute("id", "img");
+
+                var subdiv = document.createElement("div");
+                box.appendChild(subdiv);
+                // subdiv.style.border = "2px solid red";
+                var heading = document.createElement("h1");
+                subdiv.appendChild(heading);
+                var text = document.createTextNode(
+                    "Copper Kashmiri Stoler For Girls 4 Border Pashmina  Muffler Shawl For Women"
+                );
+                heading.appendChild(text);
+                heading.setAttribute("class", "heading");
+
+                var div1 = document.createElement("div");
+                subdiv.appendChild(div1);
+                div1.setAttribute("id", "div1");
+
+                var div1_sub_div1 = document.createElement("div");
+                div1.appendChild(div1_sub_div1);
+                div1_sub_div1.setAttribute("id", "div1_sub_div1");
+
+                var star = document.createElement("img");
+                star.setAttribute("src", "stars.png");
+                div1_sub_div1.appendChild(star);
+                star.setAttribute("id", "star");
+                var a = document.createElement("a");
+                a.setAttribute("href", "#");
+                var atext = document.createTextNode("19 Ratings");
+                div1_sub_div1.appendChild(a);
+                a.appendChild(atext);
+                a.setAttribute("id", "a");
+
+                var border_right = document.createElement("span");
+                div1_sub_div1.appendChild(border_right);
+                var borderText = document.createTextNode("|");
+                border_right.appendChild(borderText);
+                border_right.setAttribute("class", "border_right");
+
+                var a1 = document.createElement("a");
+                a1.setAttribute("href", "#");
+                var atext = document.createTextNode("13 Answered Questions");
+                div1_sub_div1.appendChild(a1);
+                a1.appendChild(atext);
+                a1.setAttribute("id", "a");
+
+                var div1_sub_div2 = document.createElement("div");
+                div1.appendChild(div1_sub_div2);
+                div1_sub_div2.setAttribute("id", "div1_sub_div2");
+
+                // Share Button
+                var sharebutton = document.createElement("img");
+                sharebutton.setAttribute("src", "share (1).png");
+                div1_sub_div2.appendChild(sharebutton);
+                sharebutton.setAttribute("class", "shareButton");
+
+                // favourite
+                var favourite = document.createElement("img");
+                favourite.setAttribute("src", "heart.png");
+                favourite.setAttribute("class", "shareButton");
+                div1_sub_div2.appendChild(favourite);
+
+                //
+                var div2 = document.createElement("div");
+                subdiv.appendChild(div2);
+                div2.setAttribute("class", "div2");
+
+                var Brand = document.createElement("h2");
+                div2.appendChild(Brand);
+                var BrandText = document.createTextNode("Brand:");
+                Brand.appendChild(BrandText);
+                Brand.setAttribute("class", "Brand");
+
+                //
+                var a3 = document.createElement("a");
+                a3.setAttribute("href", "#");
+                var a3Text = document.createTextNode("Mominas Gifts");
+                a3.appendChild(a3Text);
+                div2.appendChild(a3);
+                a3.setAttribute("class", "a3");
+
+                //
+                var border1 = document.createElement("span");
+                var border1Text = document.createTextNode("|");
+                div2.appendChild(border1);
+                border1.appendChild(border1Text);
+                border1.setAttribute("class", "border_right");
+
+                //
+                var a4 = document.createElement("a");
+                a4.setAttribute("href", "#");
+                var a4Text = document.createTextNode("More Women from Mominas Gifts");
+                a4.appendChild(a4Text);
+                div2.appendChild(a4);
+                a4.setAttribute("class", "a3");
+
+                // pricing
+                var pricing = document.createElement("div");
+                subdiv.appendChild(pricing);
+                pricing.setAttribute("class", "pricing");
+                var heading1 = document.createElement("h1");
+                pricing.appendChild(heading1);
+                var headignText = document.createTextNode("Rs. 999");
+                heading1.appendChild(headignText);
+                heading1.setAttribute("class", "heading1");
+                //
+                var salepricingdiv = document.createElement("div");
+                pricing.appendChild(salepricingdiv);
+                salepricingdiv.setAttribute("class", "salepricingdiv");
+                var heading2 = document.createElement("h2");
+                salepricingdiv.appendChild(heading2);
+                var heading2Text = document.createTextNode("Rs. 1,099");
+                heading2.appendChild(heading2Text);
+                heading2.setAttribute("class", "heading2");
+                var span2 = document.createElement("span");
+                salepricingdiv.appendChild(span2);
+                var span3Text = document.createTextNode("-9%");
+                span2.appendChild(span3Text);
+                span2.setAttribute("class", "span2");
+
+                // 
+                var div3 = document.createElement("div")
+                subdiv.appendChild(div3)
+                div3.setAttribute("id", "div3")
+
+                var Size = document.createElement("h2")
+                div3.appendChild(Size)
+                var SizeText = document.createTextNode("Size")
+                Size.appendChild(SizeText)
+                Size.setAttribute("class", "size")
+
+                var subdiv3 = document.createElement("div")
+                div3.appendChild(subdiv3)
+                subdiv3.setAttribute("id", "subdiv3")
+                var Int = document.createElement("span")
+                subdiv3.appendChild(Int)
+                var IntText = document.createTextNode("Int")
+                Int.appendChild(IntText)
+                Int.setAttribute("class", "Int")
+                var button = document.createElement("button")
+                subdiv3.appendChild(button)
+                var buttonText = document.createTextNode("One Size")
+                button.appendChild(buttonText)
+
+
+                i++;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -19,6 +19,7 @@
   border: 2px solid black;
   border-radius: 10px;
   padding-bottom: 60px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .Name {

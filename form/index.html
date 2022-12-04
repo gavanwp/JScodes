@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <script src="./form.js"></script>
+
     <link rel="stylesheet" href="./form.css">
 
 
@@ -15,23 +15,6 @@
             background-color: #9d00c5;
         }
     </style>
-    <script>
-        // setTimeout(function () {
-        //     console.log("setTimeout")
-        // }, 2000)
-
-        // setInterval(function () {
-        //     console.log("setInterval")
-
-        // }, 2000)
-
-
-
-
-
-
-
-    </script>
 </head>
 
 <body>
@@ -56,42 +39,65 @@
 
                 </P>
             </div>
-
-            <div> <input type="text" class="input" id="Name" name="name" placeholder="Name" /> </div>
-            <div> <input type="text" class="input" id="Father" name="name" placeholder="Father Name" /> </div>
-
-            <div> <input type="email" class="input" name="email" id="email" placeholder="Email"> </div>
-            <div> <input type="password" class="input" name="password" id="password" placeholder="Password"> </div>
-
-            <div><input type="number" maxlength="14" class="input" name="number" id="cnic" placeholder="CNIC"
-                    onkeydown="cnic_limit(this); " onkeyup="cnic_limit(this);"> </div>
-            <div> <input type="number" minlength="14" onkeydown="mobile_limit(this);" onkeyup="mobile_limit(this);"
-                    class="input" name="password" id="number" placeholder="Number">
-                <p class="text">Upload your passport size photo with blue background</p>
-                <div>
-                    <input type="checkbox" name="checkbox"> <span>I have laptop for classes</span>
-                    <p id="massage" class="massage"></p>
+            <form onsubmit="Submit() ; return false">
+                <div> <input type="text" class="input" id="Name" name="name" placeholder="Name" /> </div>
+                <div> <input type="text" class="input" id="Father" name="name" placeholder="Father Name" /> </div>
+                <div> <input type="email" class="input" name="email" id="email" placeholder="Email"> </div>
+                <div> <input type="password" class="input" name="password" id="password" placeholder="Password"> </div>
+                <div><input class="input" name="number" id="cnic" placeholder="CNIC"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        type="number" maxlength="14"> </div>
+                <div> <input
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        type="number" maxlength="11" class="input" name="password" id="number" placeholder="Number">
                 </div>
-            </div>
+                <div>
+                    <select id="Courses" name="Select Courses" class=" select">
+                        <option value="Select Courses" class="selected" selected>Select Courses</option>
+                        <option value="Web Development & Web Designing">Web Development & Web Designing</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Wordpress">Wordpress</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Freelancing">Freelancingt</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="Qualification" name="cars" class=" select">
+                        <option value="Select Courses" class="selected" selected>Select Qualification</option>
+                        <option value="Matriculation">Matriculation</option>
+                        <option value="Intermediaten">Intermediate</option>
+                        <option value="Graduate">Graduate</option>
 
-            <div>
+                    </select>
+                </div>
+                <div>
+                    <select id="Gender" name="Gender" class=" select">
+                        <option value="Select Courses" class="selected" selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
 
-            </div>
-
-
-            <button onclick=" Submit() " class="signUp">Sign Up</button>
-
-
+                    </select>
+                </div>
+                <div class="label">
+                    <label class="lable" for="file"> Upload Photo</label>
+                    <input class="input" type="file" id="file">
+                </div>
+                <div>
+                    <p class="text">Upload your passport size photo with blue background</p>
+                    <div>
+                        <input type="checkbox" name="checkbox" id="checkbox" value="I have laptop for classes"> <span>I
+                            have laptop for classes</span>
+                        <p id="massage" class="massage"></p>
+                    </div>
+                </div>
+                <button class="signUp">Sign Up</button>
         </div>
 
-
+        </form>
     </div>
 
-    <!-- <input type="number"  maxlength="14" > -->
 
-    <script>
-
-    </script>
+    <script src="./form.js"></script>
 
 
 </body>

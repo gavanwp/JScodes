@@ -112,11 +112,8 @@
 
             <div class="myclass">
                 <h2>Mouse Event</h2>
-
-
-
             </div>
-            <h1 id="h1" class="h1" onclick=" add()"></h1>
+            <h1 id="h1" class="h1"></h1>
             <input type="text" id="headinginput" class="text1" />
             <button onclick="add()" class="update" id="update"> Update</button>
             <button onclick="function1()" class="edittxt" id="edittXt"> Edit text</button>
@@ -132,23 +129,24 @@
     <script>
 
         var heading1 = document.getElementsByTagName("h1")
-        heading1[0].innerHTML = "Click Update Button!"
+        var title = document.getElementById("h1")
+        title.innerHTML = "Click Update Button !"
+        // heading1[0].innerHTML = "Click Update Button!"
+
+
+        var editTxt = document.getElementById("edittXt");
+        var upDate = document.getElementById("update")
         function add() {
             var hinput = document.getElementById("headinginput");
-        
             hinput.style.display = "block"
 
             var h1 = document.getElementById("h1");
             h1.innerHTML = hinput.value
 
-            var editTxt = document.getElementById("edittXt");
-            var upDate = document.getElementById("update")
-          
-
             if (hinput.value === "") {
-                h1.innerHTML = ("Click Update Button !")
-                hinput.value = "Click Update Button !"
-               
+                h1.innerHTML = ("Click Update Button !");
+                hinput.value = h1.innerHTML;
+
 
             } else if (hinput.value === hinput.value) {
                 hinput.style.display = "none"
@@ -174,7 +172,7 @@
             }
         }
 
-        
+
 
 
 
@@ -213,7 +211,7 @@
     </script>
 
 
-<!-- <div><a href="./Top-HD-sad-quotes-for-whatsapp-status-in-hindi-Pics-Images-Download-Free.gif" download >download This video</a>
+    <!-- <div><a href="./Top-HD-sad-quotes-for-whatsapp-status-in-hindi-Pics-Images-Download-Free.gif" download >download This video</a>
 <p title="hi" >hello</p>
 <p contenteditable="" >Hello world</p>
 <marquee behavior="" direction="right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, blanditiis?</marquee>

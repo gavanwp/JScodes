@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <!-- 
+    <!--     
     <h id="heading1"></h1>
 
         <button onclick="Button()">Button </button> -->
 
-    <!-- 
+    <!--  
     <h1 class="myclass"></h1>
     <h1 class="myclass"></h1>
     <h1 class="myclass"></h1>
     <h1 class="myclass"></h1>
-    <h1 class="myclass"></h1>
-    <button onclick="fun3()">button</button> -->
+    <h1 class="myclass"></h1> -->
+    <!-- <button onclick="Button()">button</button> -->
 
 
 
@@ -93,6 +93,15 @@
         // }
 
 
+
+        const func = () => {
+            return this.value;
+
+        }
+        const bounded = func.bind({
+            value: "Hello World"
+        })
+        const result = bounded();
     </script>
 </body>
 

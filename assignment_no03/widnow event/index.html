@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="add(); return false ">
+        <input type="text" id="input1">
+        <select name="course" id="course">
+            <option value="Course" selected>Course</option>
+            <option value="web Development"> Web Development</option>
+            <option value="App Development"> App Development</option>
+        </select>
+        <input type="radio" name="gender" value="Male" id="">
+        <input type="radio" name="gender" value="Female" id="">
+        <button> Button </button>
+    </form>
+    <script>
+        function add() {
+           
+            return false;
+            var course = document.getElementById("course")
+
+            if (course.selectedIndex === 0) {
+                alert("hello World")
+
+            } else {
+                var selected_course = course.options[course.selectedIndex].value;
+                console.log(selected_course)
+            }
+            if (selected_course === "web Development") {
+                window.location.assign("https://iskillers.com/")
+
+            }
+            else if (selected_course === "App Development") {
+                window.location.assign("https://iskillers.com/mobile-app-development")
+            }
+         
+
+
+            }
+               var gender = document.getElementById("gender")
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    console.log(gender[i].value)
+                }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

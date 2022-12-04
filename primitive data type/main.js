@@ -5,8 +5,8 @@ let c = true; //;can also be false
 let d = BigInt( "574")+ BigInt(3)
 let e = Symbol ("I am a nice symbol")
 let g 
-console.log( a, b, c,d, e)
-console.log(typeof g)
+// console.log( a, b, c,d, e)
+// console.log(typeof g)
 
 //Non promitivs data type Ojects in Js 
 const item = {
@@ -16,14 +16,10 @@ const item = {
   "gavan": undefined
 }
 
-const aray  = ( a , b , c  )>={
-  aray
+const aray  = ()=>{
+  var promt = prompt()
+  document.body.style.background = promt
+  
+ 
 }
-console.log (item["Naresh"])
- console.log("Null")
-console.log("Number")
-console.log("Symbole")
-console.log("String")
-console.log("Boolean")
-console.log("BigInt")
-console.log("undefined")
+

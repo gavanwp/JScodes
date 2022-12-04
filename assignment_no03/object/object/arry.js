@@ -103,7 +103,6 @@ for (let index = 0; index < UsersData.length; index++) {
     var subdiv = document.createElement("div");
     div.appendChild(subdiv);
     subdiv.setAttribute("class", "subdiv");
-
     var Email = document.createElement("h2");
     subdiv.appendChild(Email);
     var EmailText = document.createTextNode(UsersData[index].email[mail]);

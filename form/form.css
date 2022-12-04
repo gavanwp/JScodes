@@ -7,7 +7,6 @@ body {
   flex-direction: row;
   justify-content: center;
   position: relative;
-  
 }
 
 .maindiv {
@@ -62,13 +61,13 @@ button:hover {
 .container {
   background-color: white;
   width: 540px;
-  height: 680px;
+  height: 920px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  padding-top: 70px;
+  padding-top: 50px;
   margin-bottom: 40px;
 }
 
@@ -89,8 +88,25 @@ button:hover {
   color: #851e98;
   opacity: 1;
   font-weight: 500px;
- 
 }
+
+.select {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 18px;
+  border: 2px solid #851e98;
+  color: #851e98;
+  font-size: 16px #851e98;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+}
+
+.selected {
+  color: grey;
+}
+
 .text {
   font-size: 12px;
   margin-top: -5px;
@@ -110,10 +126,34 @@ button:hover {
   color: white;
   font-size: 16px;
   cursor: pointer;
-margin-top: 20px;
+  margin-top: 20px;
   border-radius: 15px;
+  margin-left: 110px;
 }
 
 .signUp:hover {
   color: white;
+}
+#file {
+  display: none;
+}
+.label {
+  width: 97%;
+
+  margin-bottom: 18px;
+  border: 2px solid #851e98;
+  color: #851e98;
+  font-size: 16px #851e98;
+  font-weight: 500;
+  border-radius: 5px;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  padding: 5px;
+}
+.lable{
+  width: 100%;
+  height: 20px;
 }
