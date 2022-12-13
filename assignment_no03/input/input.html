@@ -51,9 +51,9 @@
     <div class="input1">
         <input type="password" id="myInput" placeholder="Type your password">
         <div onclick="add()" id="div"> <img src="./view.png" alt="" id="show" class="show">
-            <img src="./closed-eyes.png" class="hide" alt="" id="hide">
+
         </div>
-       
+
     </div>
 
 
@@ -61,28 +61,25 @@
 
     <script>
 
-        var show = document.getElementById("show")
+       
         var input = document.getElementById("myInput");
-        var hide = document.getElementById("hide")
-        
-        
         function add() {
 
             if (input.type === "password") {
                 input.type = "text";
-                
-                hide.style.display = "block"
-                show.style.display = "none"
+
+                let hide = document.getElementById("show")
+                hide.setAttribute("src", "closed-eyes.png")
+
 
             } else {
                 input.type = "password";
-                hide.style.display = "none"
-                show.style.display = "block"
-             
+                let show = document.getElementById("show")
+                show.setAttribute("src", "view.png")
             }
         }
         // console.log(document.body.lastElementChild)
-        var arry =  document.body.children[1]
+        var arry = document.body.children[1]
         console.log(arry.nextElementSibling)
 
 

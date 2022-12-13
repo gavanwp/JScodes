@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destrutred of arrry and object </title>
+</head>
+
+<body>
+    <script>
+        // let arrry = [33, 55, 33, 55]
+        // console.log(arrry[0])
+        // console.log(arrry[1])
+        // let [a, a1, a2, a3] = arrry
+        // console.log(a3)
+
+
+
+
+        let obj = {
+            Name: "gavan",
+            Fname: "anbji"
+        }
+
+        let { Name, Fname } = obj
+        console.log(Name)
+
+
+        // console.clear()
+        let b = [44, 22, 55, 33, 77]
+        // console.log(Math.max(...b))
+        console.log(Math.min(...b))
+
+        let obJ = {
+            name: "gavan kumar",
+            gmail: "gavankumar067@gmail.com",
+            phone: {
+                Number: "5435445435"
+            },
+        }
+        let {
+            name,
+            gmail,
+            phone: { Number },
+
+        } = obJ;
+        console.log(gmail)
+        // console.clear()
+        // 
+        let arrary = [33, 66, 34, 87, 34]
+        for (let i = 0; i < arrary.length; i++) {
+            console.log(arrary[i], i)
+
+        }
+        arrary.map((v, i) => {
+            console.log(v)
+        })
+
+        arrary.forEach((value, key) => {
+            console.log(value, key)
+        })
+
+
+        // promise 
+
+        // let y = true
+        // let prom = new Promise((resolve, reject) => {
+        //     if (y) {
+        //         resolve("resolved")
+        //     } else {
+        //         reject("reject")
+        //     }
+
+        // })
+        // console.log(prom)
+
+        // let y = (prom) => {
+        //     return new Promise((resolve, reject) => {
+        //         console.log("Data padding.......")
+        //         setTimeout(() => {
+        //             if (prom) {
+        //                 resolve("resolved")
+        //             } else {
+        //                 reject("reject")
+        //             }
+
+        //         }, 3000);
+        //     })
+        // }
+
+        // let onfulfilment = (result) => {
+        //     console.log(result)
+        // }
+        // let onrejection = (error) => {
+        //     console.log(error)
+        // }
+
+
+        // y(true).then(onfulfilment).catch(onrejection)
+        console.clear()
+        let value = true
+        let promise = new Promise((resolve, reject) => {
+            // console.log("loading...........")
+            setTimeout(() => {
+                if (value) {
+                    resolve("The applcation is resolved")
+                    alert("congratulations user your applicaton is approved")
+
+                } else {
+                    reject("the application  is rejected")
+                    alert("unfortunately your application is rejected please try again ")
+                }
+            }, 3000);
+
+        })
+        console.log(promise)
+
+
+
+
+    </script>
+</body>
+
+</html>

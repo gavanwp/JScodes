@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #maindiv {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #box {
+            width: 35%;
+            height: 40vh;
+            background-color: #FFDEE9;
+            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: none;
+
+        }
+
+        input {
+            width: 100%;
+            height: 4vh;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            padding: 8px;
+        }
+
+        button {
+            width: 30%;
+            height: 30px;
+            background-color: #74EBD5;
+            background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+            border: none;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            width: 100%;
+            margin-top: -10px;
+            /* border: 2px solid red; */
+        }
+    </style>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+
+
+    <script>const firebaseConfig = {
+            apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
+            authDomain: "newproject-53b33.firebaseapp.com",
+            projectId: "newproject-53b33",
+            storageBucket: "newproject-53b33.appspot.com",
+            messagingSenderId: "984028775825",
+            appId: "1:984028775825:web:db8dc90d8f83c417e40630",
+            measurementId: "G-JNX0EPX3YY"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+
+
+
+<body>
+    <div id="maindiv">
+        <div id="box">
+            <h1>Create Account</h1>
+            <input type="email" placeholder=" Your Email Address" id="email">
+
+            <input type="password" placeholder="your Password" id="password">
+            <p id="massage"></p>
+            <button onclick="fun()">Click ME</button>
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+        let fun = () => {
+            let email = document.getElementById("email")
+            let password = document.getElementById("password")
+            let massage = document.getElementById("massage")
+
+            if (email.value === "") {
+                massage.innerHTML = "email is  required"
+                massage.style.color = "red"
+            } else if (password.value === "") {
+                massage.innerHTML = "password is  required"
+                massage.style.color = "red"
+            }
+
+            else {
+                let userData = {
+                    email: email.value,
+                    password: password.value,
+                }
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(userData.email, userData.password)
+                    .then((resolve) => {
+                        massage.innerHTML = "Account is successfuly created"
+                        massage.style.color = "green"
+                        console.log(resolve.value)
+                    })
+                    .catch((error) => {
+
+                        massage.innerHTML = error.message;
+                        massage.style.color = "red"
+
+
+                    });
+
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

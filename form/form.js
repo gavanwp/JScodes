@@ -135,10 +135,11 @@ function Submit() {
     console.log("Gender :", Gender.value);
     console.log("checkbox :", checkbox.value);
     console.log(file.value);
+
+    
   }
-  
+
   return false;
- 
 }
 
 // function cnic_limit(element) {

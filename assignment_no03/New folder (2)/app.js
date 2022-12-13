@@ -46,55 +46,7 @@ div4.appendChild(button);
 button.setAttribute("id", "button");
 var bttext = document.createTextNode("SIGN UP");
 button.appendChild(bttext);
-button.setAttribute("onClick", "CUserdatear()");
-
-function Userdate() {
-  var name = input1.value;
-
-  var email = input2.value;
-
-  var username = input2.value;
-
-  var pass = input4.value;
-
-  if (name === "") {
-    alert("hello");
-  } else if (email === "") {
-    alert("hello world");
-  } else if (username === "") {
-    alert("Please enter your email");
-  } else if (pass === "") {
-    alert("please enter your password");
-  } else {
-    console.log(name);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+button.setAttribute("onClick", "button()");
 
 
 
