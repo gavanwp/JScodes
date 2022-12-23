@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post </title>
+    <style>
+        div>h1 {
+            text-align: center;
+            font-size: 22px;
+            color: rgb(255, 0, 238);
+        }
+
+        #maindiv {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+
+        #button {
+            background-color: rgb(0, 255, 247);
+            width: 10%;
+            height: 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+
+        }
+
+        #button:hover {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #div1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            border: 2px solid gray;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script>const firebaseConfig = {
+            apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
+            authDomain: "newproject-53b33.firebaseapp.com",
+            databaseURL: "https://newproject-53b33-default-rtdb.firebaseio.com",
+            projectId: "newproject-53b33",
+            storageBucket: "newproject-53b33.appspot.com",
+            messagingSenderId: "984028775825",
+            appId: "1:984028775825:web:db8dc90d8f83c417e40630",
+            measurementId: "G-JNX0EPX3YY"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Create Post</h1>
+    </div>
+    <div id="maindiv">
+        <textarea name="text" id="textarea" cols="50" rows="10" placeholder="Type something.........."></textarea>
+        <p id="massage"></p>
+        <button onclick="createpost()" id="button">Create Post</button>
+    </div>
+    <div id="div1">
+        <h3 id="h3"></h3>
+        <button onclick="updateData()" id="button">Update post</button>
+    </div>
+
+    <div id="showpost">
+        
+    </div>
+    <script src="./createpost.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+</body>
+
+</html>

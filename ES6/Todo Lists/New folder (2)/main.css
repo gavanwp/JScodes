@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  min-height: 100vh;
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: auto;
+  width: 450px;
+  background-color: #3a3f49;
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.top-part {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #fff;
+}
+.saturday p {
+  font-size: 10px;
+}
+.saturday h5 {
+  letter-spacing: 1px;
+}
+.saturday h6 {
+  letter-spacing: 1px;
+}
+.tasks {
+  display: flex;
+  gap: 25px;
+}
+.strike-none {
+  text-decoration: none;
+}
+.tasks h6 {
+  letter-spacing: 1px;
+}
+.addtask {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.addtask input {
+  resize: none;
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid pink;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 11px;
+  outline: 0;
+  padding-right: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.addtask button {
+  height: 40px;
+  width: 90px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #62dafb;
+  border: none;
+  outline: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.addtask button:hover {
+  background-color: #1b99bb;
+}
+.added_tasks {
+  list-style: none;
+  color: #fff;
+  margin-top: 20px;
+}
+.added_tasks li {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #636872;
+  padding: 10px 0px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content span {
+  height: 25px;
+  width: 25px;
+  background-color: #3a3f49;
+  border: 2px solid #636872;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.content span i {
+  color: #6b717a;
+}
+.d-none {
+  display: none;
+}
+.content p {
+  font-size: 12px;
+}
+.added_tasks li span:nth-child(2) {
+  height: 25px;
+  width: 25px;
+  background-color: #3a3f49;
+  border: 2px solid #636872;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #636872;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.added_tasks li span:nth-child(2):hover {
+  color: red;
+  border: 2px solid red;
+}
+::placeholder{
+  color: black;
+  font-size: 12px;
+}
+
+
+.img-div{
+display: block;
+  display: flex;
+  justify-content: center;
+}
+
+.img-div>img{
+  width: 300px;
+}

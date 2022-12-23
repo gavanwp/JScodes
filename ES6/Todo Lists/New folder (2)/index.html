@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBcytp83xvGABQsZkyu22T-dZ6Zm5vEaO0",
+            authDomain: "my-second-68572.firebaseapp.com",
+            databaseURL: "https://my-second-68572-default-rtdb.firebaseio.com",
+            projectId: "my-second-68572",
+            storageBucket: "my-second-68572.appspot.com",
+            messagingSenderId: "451629383316",
+            appId: "1:451629383316:web:6b23248be8a4bd6c0a3e81",
+            measurementId: "G-R0KT4WDQZY"
+        };
+        firebase.initializeApp(firebaseConfig)
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top-part">
+                <div class="saturday">
+                    <h5 class="setdate">Saturday,June 1</h5>
+                    <h6 class="settime">--</h6>
+                    <p><span class="numtask" id="taskNumber">1</span> Active Tasks</p>
+                </div>
+                <div class="tasks">
+                    <h6>Incomplete Tasks</h6>
+                    <h6>Complete Tasks</h6>
+                </div>
+            </div>
+            <div class="addtask"> <input type="text" placeholder="Please Enter the task" id="input">
+                <button id="addTask" onclick="ClickME()"> Add task</button>
+            </div>
+            <ul class="added_tasks">
+
+            </ul>
+
+            <div class="img-div"><img id="myimg" src="./Round-Line-Loading.gif" alt=""></div>
+        </div>
+    </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

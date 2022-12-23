@@ -1,3 +1,4 @@
+
 let fun = () => {
   let name = document.getElementById("name");
   let Email = document.getElementById("Email");
@@ -16,8 +17,10 @@ let fun = () => {
     let userData = {
       email: Email.value,
       password: passWord.value,
+      Name: name.value,
+    
     };
-    Text.style.color = "green";
+
     firebase
       .auth()
       .createUserWithEmailAndPassword(userData.email, userData.password)
@@ -26,9 +29,19 @@ let fun = () => {
         Text.style.color = "green";
         resolve.user.sendEmailVerification();
         console.log(resolve.value);
-        setTimeout(() => {
-          window.location.assign("main.html");
-        }, 4000);
+        firebase
+          .firestore()
+          .collection("users/").doc(resolve.user.uid)
+          .set(userData)
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+          setTimeout(() => {
+            window.location.assign("./main.html")
+          }, 2000);
       })
       .catch((error) => {
         Text.innerHTML = error.message;

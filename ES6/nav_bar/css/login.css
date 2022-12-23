@@ -258,3 +258,9 @@ footer a {
 .img {
   width: auto;
 }
+
+#div{
+  width: 100vw;
+  height: 200px;
+  background-color: white;
+}

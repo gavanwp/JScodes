@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        var obj = {
+            name: "admin",
+            pass: "pass",
+
+        }
+
+        // console.log(obj)
+       
+        // console.log(obj.name)
+        // console.log(obj.pass)
+    
+
+        obj.pass = "admin2"
+        console.log(obj)
+
+        
+
+        var obj2 = new Object()
+        console.log(obj2)
+        function Userdate(name, email) {
+            this.name = name
+            this.email = email
+        }
+
+        var user1 = new Userdate("iskilers", "admin@gmal.com")
+        console.log("user1", user1)
+        var user2 = new Userdate("Hello World", "info@gmail.com")
+        console.log("user2", user2)
+
+    </script>
+</body>
+
+</html>

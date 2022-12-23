@@ -1,0 +1,13 @@
+body{
+    background-color: #f0f2f5;
+}
+#div1{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#myimage{
+    width: 25%;
+}

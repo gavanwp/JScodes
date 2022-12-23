@@ -6,13 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        #reload {
+            display: block;
+        }
+
+    .border{
+        border: 2px solid gray;
+        padding: 10px;
+    }
+    </style>
 
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
     <script>const firebaseConfig = {
             apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
             authDomain: "newproject-53b33.firebaseapp.com",
+            databaseURL: "https://newproject-53b33-default-rtdb.firebaseio.com",
             projectId: "newproject-53b33",
             storageBucket: "newproject-53b33.appspot.com",
             messagingSenderId: "984028775825",
@@ -25,8 +37,14 @@
 
 <body>
 
-
     <button onclick="logout()">log Out</button>
+    <button onclick="createpost()" >Create Post</button>
+    <button onclick="profile()" >My profile</button>
+    <!-- <img src="./img/Reload-Image-Gif-1.gif" width="300px" alt="" id="reload"> -->
+    <div id="showpost">
+
+    </div>
+  
 </body>
 
 

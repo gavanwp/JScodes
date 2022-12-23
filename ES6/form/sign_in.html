@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="./sign_in.css">
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
-    <script>const firebaseConfig = {
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script>  const firebaseConfig = {
             apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
             authDomain: "newproject-53b33.firebaseapp.com",
+            databaseURL: "https://newproject-53b33-default-rtdb.firebaseio.com",
             projectId: "newproject-53b33",
             storageBucket: "newproject-53b33.appspot.com",
             messagingSenderId: "984028775825",
@@ -38,23 +40,26 @@
                 <input type="email" id="Email" placeholder="Email" />
                 <input type="password" id="Password" placeholder="Password" />
                 <p id="p"></p>
-                <button onclick="fun()">Sign Up</button>
+                <button onclick="fun()" class="button1">Sign Up</button>
+
             </div>
         </div>
         <div class="form-container sign-in-container">
             <div class="form">
-                <h1>Sign in</h1>
+                <h1>Sign in with</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><img src="./img/facebook.svg" class="img" alt=""></a>
                     <a href="#" class="social"><img src="./img/instagram.svg" class="img" alt=""></a>
                     <a href="#" class="social"><img src="./img/twitter.svg" class="img" alt=""></a>
+                    <button onclick="loginWithGoogle()" class="loginwith"><img src="./img/google.png" class="img"
+                            alt=""></button>
+
                 </div>
                 <span>or use your account</span>
                 <input type="email" name="email" id="myemail" placeholder="Email" />
                 <input type="password" id="mypassword" placeholder="Password" />
                 <a href="./forgot-password.html">Forgot your password?</a>
                 <p id="p1"></p>
-                <button onclick="fun2()">Sign In</button>
+                <button class="button1" onclick="fun2()">Sign In</button>
             </div>
         </div>
         <div class="overlay-container">
@@ -62,12 +67,12 @@
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+                    <button class="ghost button1" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, User!</h1>
                     <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <button class="ghost button1" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>

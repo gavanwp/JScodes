@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="../style/signup.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <h1>Sign Up</h1>
+            <div>
+                <div id="div1">
+                    <label for="firstName">First Name :</label>
+                    <input type="text"  name="name" id="firstName" class="input" placeholder="First Name">
+                </div>
+                <div class="password" >
+                    <label for="lastName">Last Name :</label>
+                    <input type="text"  name="name" id="lastName" class="input" placeholder="Last Name">
+                </div>
+                <div class="password" >
+                    <label for="mobileNumber">Mobile Number :</label>
+                    <input type="text" maxlength="11"  name="number" id="mobileNumber" class="input" placeholder="Mobile Number"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="password" >
+                    <label for="gmail">Email Address :</label>
+                    <input type="email"  name="email" id="gmail" class="input" placeholder="Email Address">
+                </div>
+                <div class="password" >
+                    <label for="password">Password :</label>
+                    <input type="password" name="password"  id="password" class="input" placeholder="Password">
+                </div>
+                <div class="password" >
+                    <label for="ReenterPass">Re-enter Password :</label>
+                    <input type="password" name="password"  id="ReenterPass" class="input" placeholder="Re-enter Password">
+                </div>
+                <div id="buttondiv">
+                    <p id="message" ></p>
+                    <button id="button" onclick="login()" >Sign Up</button>
+                 
+                </div>
+                <div id="div3" >
+                    <h2>Already have an account ?</h2>
+                    <button id="signup"> Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../javascript/signup.js"></script>
+</body>
+
+</html>

@@ -33,3 +33,20 @@ let fun2 = () => {
       });
   }
 };
+
+const loginWithGoogle = () => {
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      console.log(result)
+      window.location.assign("main.html")
+    })
+    .catch((error) => {
+      console.log(error.message)
+    });
+};
+
+
+
