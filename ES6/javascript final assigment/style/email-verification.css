@@ -22,7 +22,7 @@
     border-radius: 10px;
   }
   .box > h1 {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
   
   }
@@ -51,9 +51,13 @@
   .password{
       margin-top: 10px;
   }
-  
-  #button{
-      width: 100%;
+  #buttondiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .button{
+      width: 45%;
       margin-right: 5px;
       margin-top: 15px;
       height: 30px;

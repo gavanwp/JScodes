@@ -5,8 +5,6 @@ firebase.auth().onAuthStateChanged((user) => {
     uid = user.uid;
     if (user.emailVerified) {
       console.log("emailverified");
-
-      
     } else {
       window.location.assign("./verifiedemail.html");
     }
@@ -14,6 +12,9 @@ firebase.auth().onAuthStateChanged((user) => {
     window.location.assign("./sign_in.html");
   }
 });
+// Post Images
+let donwloadult;
+let filetype = "";
 
 let textarea = document.getElementById("textarea");
 let massage = document.getElementById("massage");
@@ -26,6 +27,8 @@ let createpost = () => {
     let obj = {
       value: textarea.value,
       uid: uid,
+      image: donwloadult,
+      filetype: filetype,
     };
     firebase
       .firestore()
@@ -35,6 +38,7 @@ let createpost = () => {
         massage.innerHTML = "Your post created";
         massage.style.color = "green";
         setTimeout(() => {
+          2;
           window.location.assign("./main.html");
         }, 2000);
       })
@@ -44,45 +48,27 @@ let createpost = () => {
     console.log(textarea.value);
   }
 };
+let postimgae = (event) => {
+  // console.log(event.target.files);
 
-/// show data
-
-// var showdata = firebase
-//   .firestore()
-//   .collection("posts")
-//   .doc("yvFxToiNW1bWp9f97JEI");
-// let showtext = document.getElementById("h3");
-
-// showdata
-//   .get()
-//   .then((doc) => {
-//     if (doc.exists) {
-//       // console.log("Document data:", doc.data().UserID);
-//       showtext.innerHTML = doc.data().value;
-//     } else {
-//       console.log("No such document!");
-//     }
-//   })
-//   .catch((error) => {
-//     console.log("Error getting document:", error);
-//   });
-
-/// Update Value
-// let updateData = () => {
-//   let pro = prompt("");
-//   var washingtonRef = firebase
-//     .firestore()
-//     .collection("posts")
-//     .doc("DphBabb5xDeCDZIfRoic");
-
-//   washingtonRef
-//     .update({
-//       value: pro,
-//     })
-//     .then(() => {
-//       console.log("Document successfully updated!");
-//     })
-//     .catch((error) => {
-//       console.error("Error updating document: ", error);
-//     });
-// };
+  let file = event.target.files[0];
+  const fileref = firebase.storage().ref().child(`posts/${file.name}`);
+  const uploadTask = fileref.put(file);
+  uploadTask.on(
+    "state_changed",
+    (snapshot) => {
+      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log("Upload is " + progress + "% done");
+    },
+    (error) => {
+      console.log(error);
+    },
+    () => {
+      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+        console.log("File available at", downloadURL);
+        donwloadult = downloadURL;
+        filetype = file.type;
+      });
+    }
+  );
+};

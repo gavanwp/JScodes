@@ -6,37 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../style/forgot-password.css">
+    <link rel="stylesheet" href="../style/email-verification.css">
 </head>
 
 <body>
     <div id="container">
         <div class="box">
-            <h1>Forgot Password</h1>
+            <h1>Please verify your email</h1>
             <div>
                 <div id="forgottextmessage">
                     <p>Lost your password? Please enter your email address. You will receive a link to create a new
                         password via email</p>
                 </div>
 
-                <div id="div1">
-                    <label for="gmail">Email Address :</label>
-                    <input type="email" name="email" id="gmail" class="input" placeholder="Email Address">
-                </div>
-
+        
+                <p id="message"></p>
                 <div id="buttondiv">
-                    <p id="message"></p>
-                    <button id="button" onclick="login()">Resquest password reset</button>
+                    <button class="button" onclick="login()">Reset Email</button>
+                    <button class="button" onclick="login()">Confirm</button>
 
                 </div>
-                <div id="div3">
-                    <button id="signup">Back to login</button>
-                </div>
+               
             </div>
         </div>
 
     </div>
-    <script src="../javascript/forgot-password.js"></script>
+    <script src="../javascript/email-verification.js"></script>
 </body>
 
 </html>

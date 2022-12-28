@@ -18,6 +18,7 @@ let fun = () => {
       email: Email.value,
       password: passWord.value,
       Name: name.value,
+      photoURL: ""
     
     };
 

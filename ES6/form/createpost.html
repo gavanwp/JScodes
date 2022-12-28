@@ -55,6 +55,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
     <script>const firebaseConfig = {
             apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
             authDomain: "newproject-53b33.firebaseapp.com",
@@ -76,15 +77,13 @@
     <div id="maindiv">
         <textarea name="text" id="textarea" cols="50" rows="10" placeholder="Type something.........."></textarea>
         <p id="massage"></p>
+        <input type="file" name="" id="" onchange="postimgae(event)">
         <button onclick="createpost()" id="button">Create Post</button>
     </div>
-    <div id="div1">
-        <h3 id="h3"></h3>
-        <button onclick="updateData()" id="button">Update post</button>
-    </div>
+
 
     <div id="showpost">
-        
+
     </div>
     <script src="./createpost.js"></script>
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->

@@ -8,19 +8,30 @@
     <title></title>
     <style>
         #reload {
-            display: block;
-        }
-
-    .border{
-        border: 2px solid gray;
-        padding: 10px;
-    }
+            display: block; }
+        .border {
+            border: 2px solid gray;
+            padding: 10px;}
+        .postimage {
+            width: 50%;
+            height: 400px;
+            margin-left: 300px;}
+        .profileimage {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;}
+        #div1 {
+            border: 2px solid gray;
+            display: flex; }
+        #name{
+            margin-left: 10px; }
     </style>
 
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
     <script>const firebaseConfig = {
             apiKey: "AIzaSyCZCZbuOhTnORJrnjitGFWYQ-X3_YJifpM",
             authDomain: "newproject-53b33.firebaseapp.com",
@@ -38,13 +49,14 @@
 <body>
 
     <button onclick="logout()">log Out</button>
-    <button onclick="createpost()" >Create Post</button>
-    <button onclick="profile()" >My profile</button>
+    <button onclick="createpost()">Create Post</button>
+    <button onclick="profile()">My profile</button>
     <!-- <img src="./img/Reload-Image-Gif-1.gif" width="300px" alt="" id="reload"> -->
     <div id="showpost">
 
     </div>
-  
+
+
 </body>
 
 
