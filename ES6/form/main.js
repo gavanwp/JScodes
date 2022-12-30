@@ -1,18 +1,18 @@
+let showpost = document.getElementById("showpost");
 let uid;
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    console.log(user);
+    // console.log(user);
     uid = user.uid;
     if (user.emailVerified) {
       // console.log("emailverified");
       /// Show Posts on Home Page
-      let showpost = document.getElementById("showpost");
       firebase
         .firestore()
         .collection("posts")
         .get()
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.size === 0) {
             let message = document.createElement("h2");
             showpost.appendChild(message);
@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged((user) => {
             // console.log("data not available")
           } else {
             res.forEach((allposts) => {
-              console.log(allposts.data());
+              // console.log(allposts.data());
               firebase
                 .firestore()
                 .collection("users/")
@@ -28,22 +28,22 @@ firebase.auth().onAuthStateChanged((user) => {
                 .get()
                 .then((res) => {
                   console.log(res.data());
-                  let div1 = document.createElement("div");
-                  showpost.appendChild(div1);
-                  div1.setAttribute("id", "div1");
-                  let profileimage = document.createElement("img");
-                  div1.appendChild(profileimage);
-                  profileimage.setAttribute("class", "profileimage");
-                  if (res.data().profile !== "") {
-                    profileimage.setAttribute("src", res.data().profile);
-                  } else {
-                    profileimage.setAttribute("src", "images.png");
-                  }
-                  let username = document.createElement("h4");
-                  div1.appendChild(username);
-                  username.innerHTML = res.data().Name;
-                  username.setAttribute("id", "name");
-                  /// post body
+                  // let div1 = document.createElement("div");
+                  // showpost.appendChild(div1);
+                  // div1.setAttribute("id", "div1");
+                  // let profileimage = document.createElement("img");
+                  // div1.appendChild(profileimage);
+                  // profileimage.setAttribute("class", "profileimage");
+                  // if (res.data().profile !== "") {
+                  //   profileimage.setAttribute("src", res.data().profile);
+                  // } else {
+                  //   profileimage.setAttribute("src", "images.png");
+                  // }
+                  // let username = document.createElement("h4");
+                  // div1.appendChild(username);
+                  // username.innerHTML = res.data().Name;
+                  // username.setAttribute("id", "name");
+                  // /// post body
                   let subdiv = document.createElement("div");
                   showpost.appendChild(subdiv);
                   subdiv.setAttribute("class", "border");
@@ -55,17 +55,15 @@ firebase.auth().onAuthStateChanged((user) => {
                     subdiv.appendChild(postimgae);
                     postimgae.setAttribute("class", "postimage");
                     postimgae.setAttribute("src", allposts.data().image);
-                    
-                  } 
-                  if (allposts.data().filetype === "video/mp4") {
-                   let video = document.createElement("video")
-                   subdiv.appendChild(video)
-                   video.setAttribute("controls","controls")
-                   let source  = document.createElement("source")
-                   video.appendChild(source)
-                   source.setAttribute("src",allposts.data().image)
                   }
-          
+                  if (allposts.data().filetype === "video/mp4") {
+                    let video = document.createElement("video");
+                    subdiv.appendChild(video);
+                    video.setAttribute("controls", "controls");
+                    let source = document.createElement("source");
+                    video.appendChild(source);
+                    source.setAttribute("src", allposts.data().image);
+                  }
                 });
             });
           }
@@ -100,3 +98,64 @@ let createpost = () => {
 let profile = () => {
   window.location.assign("./profile.html");
 };
+
+// let demo = document.getElementById("demo")
+// firebase
+// .firestore()
+// .collection("users")
+// .get()
+// .then(snapshot => {
+//   snapshot.forEach((allusres) => {
+//     let div1 = document.createElement("div");
+//     showpost.appendChild(div1);
+//     div1.setAttribute("id", "div1");
+//     let profileimage = document.createElement("img");
+//     div1.appendChild(profileimage);
+//     profileimage.setAttribute("class", "profileimage");
+//     if (allusres.data().profile !== "") {
+//       profileimage.setAttribute("src", allusres.data().profile);
+//       console.log( allusres.data().profile)
+//     } else {
+//       profileimage.setAttribute("src", "images.png");
+//     }
+//     let username = document.createElement("h4");
+//     div1.appendChild(username);
+//     username.innerHTML = allusres.data().Name;
+//     username.setAttribute("id", "name");
+//     /// post body
+
+//    })
+// })
+
+var cities = [];
+firebase
+  .firestore()
+  .collection("users")
+  .onSnapshot((doc) => {
+    doc.forEach((userres) => {
+      for (let index = 0; index < userres.data().length; index++) {
+        cities.push(index);
+        
+        
+      }
+    
+      console.log(cities)
+      let div1 = document.createElement("div");
+      showpost.appendChild(div1);
+      div1.setAttribute("id", "div1");
+      let profileimage = document.createElement("img");
+      div1.appendChild(profileimage);
+      profileimage.setAttribute("class", "profileimage");
+      if (userres.data().profile !== "") {
+        profileimage.setAttribute("src", userres.data().profile);
+        // console.log(userres.data().profile);
+      } else {
+        profileimage.setAttribute("src", "images.png");
+      }
+      let username = document.createElement("h4");
+      div1.appendChild(username);
+      username.innerHTML = userres.data().Name;
+      username.setAttribute("id", "name");
+    });
+ 
+  });
